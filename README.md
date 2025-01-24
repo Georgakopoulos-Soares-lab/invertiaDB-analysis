@@ -7,6 +7,8 @@ MINDI stands for Mirror (MR), Inverted (IR), Direct (DI) repeats.
 Mindi is a python package, and a wrapper around non b-gfa software,
 that provides a python interface to extract non B-DNA motifs across any genome.
 
+Mindi is using the snakemake workflow language (version 7.7.4).
+
 We used the computational workflow to systematically extract, pre-process and validate inverted repeats for invertiaDB project.
 
 In particular, in order to extract the inverted repeats, we used the following command:
@@ -129,6 +131,27 @@ To submit the pipeline, we simply execute the bash script:
 ```
 export CORES=2
 bash nonbdna_sub.sh $CORES
+```
+
+The command invokes the snakemake pipeline with the appropriate parameters as inherited from the configuration yaml files.
+
+```
+snakemake --snakefile nonbdna_pipe.smk \
+            --configfile config/config.server.yaml \
+	        --rerun-triggers mtime \
+            --rerun-incomplete \
+            --reason \
+            --keep-going \
+            --jobs $j \
+            --latency-wait ${latency} \
+            --cluster-config config/cluster_nonbdna.yaml \
+            --cluster "sbatch -p {cluster.partition} \
+                -t {cluster.time} \
+                --mem={cluster.mem} \
+                --nodes={cluster.nodes} \
+                -J {cluster.jobName} \
+                -o MindiNonBDNAJobDetails/{cluster.jobName}-%x-%j.out \
+                -e MindiNonBDNAJobDetails/{cluster.jobName}-%x-%j.err"
 ```
 
 Immediatly, the script understands if we are connected locally or not.
