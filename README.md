@@ -135,6 +135,21 @@ bash nonbdna_sub.sh $CORES
 
 The command invokes the snakemake pipeline with the appropriate parameters as inherited from the configuration yaml files.
 
+Locally, the following command is invoked:
+```
+snakemake --snakefile nonbdna_pipe.smk \
+        --configfile config/config.yaml \
+	    --rerun-triggers mtime \
+        --rerun-incomplete \
+        --reason \
+        --keep-going \
+        --latency-wait ${latency} \
+        --cores $j
+
+```
+
+while on SSH connection:
+
 ```
 snakemake --snakefile nonbdna_pipe.smk \
             --configfile config/config.server.yaml \
