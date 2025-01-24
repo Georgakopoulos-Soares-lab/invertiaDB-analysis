@@ -104,6 +104,16 @@ The parameters are explained by the following table:
 | step_threshold | parameter used on GC threshold when estimating densities of repeats |
 | log_sleep      | sleep parameter for daemon logging thread |
 
+#### Core Dependencies
+
+| Dependencies |
+| -----------  |
+| snakemake==7.4.3 |
+| bedtools         |
+| pybedtools       |
+
+#### Extraction using snakemake
+
 Finally, we need a directory of genomes:
 
 ```
