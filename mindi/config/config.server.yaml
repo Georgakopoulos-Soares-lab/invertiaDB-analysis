@@ -1,0 +1,11 @@
+buckets: 2
+pattern: ['IR']
+out: 'repeat_out'
+tempdir: '/scratch/nmc6088/MindiEnrichmentG4'
+DESIGN: 'design.csv'
+log_sleep: 300
+
+# statistics
+alpha: 0.05
+N: 1000
+

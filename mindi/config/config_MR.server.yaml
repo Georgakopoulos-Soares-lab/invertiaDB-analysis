@@ -1,0 +1,9 @@
+buckets: 71
+mode: 'MR'
+out: 'repeat_out_eukaryota'
+# files: 'filtered_assemblies_without_eukaryotes.txt'
+files: 'filtered_assemblies_eukaryota.txt'
+destination_merged: 'gff_merged_datasets'
+minrep: 8
+max_spacer_length: 8
+min_arm_length: 10

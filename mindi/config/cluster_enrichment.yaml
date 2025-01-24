@@ -1,0 +1,11 @@
+# cluster.yaml
+#
+__default__:
+        time: "48:00:00"
+        mem: "22GB"
+        nodes: 1
+        # account: "izg5139_sc"
+        partition: "open"
+        # partition: "sla-prio"
+        jobName: "Mindi:EnrichmentExtraction"
+

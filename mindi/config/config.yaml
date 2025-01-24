@@ -1,0 +1,12 @@
+buckets: 2
+pattern: ['IR']
+out: 'repeat_out'
+suffix: 'fna'
+tempdir: '/tmp'
+DESIGN: 'design.csv'
+step_threshold: 0.05
+log_sleep: 0.5
+
+# statistics
+alpha: 0.05
+N: 1000

@@ -1,0 +1,35 @@
+{
+  "params":
+      {
+        "IR": {
+              "minrep": 10,
+              "maxspacer": 8
+        },
+        "MR": {
+              "minrep": 10,
+              "maxspacer": 7
+        },
+        "DR": {
+              "minrep": 10,
+              "maxrep": 100,
+              "maxspacer": 10
+        }
+      },
+  "headers": [
+               "seqID",
+               "start",
+               "end",
+               "sequenceOfArm",
+               "sequenceOfSpacer",
+               "sequence",
+               "armLength",
+               "spacerLength",
+               "sequenceLength",
+               "arm_a",
+               "arm_g",
+               "arm_c",
+               "arm_t",
+               "composition"
+          ]
+}
+    

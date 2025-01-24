@@ -1,0 +1,17 @@
+# cluster.yaml
+
+
+__default__:
+        time: "48:00:00"
+        mem: "22GB"
+        nodes: 1
+        account: "izg5139_sc"
+        partition: "open"
+        jobName: "Mindi:Extraction"
+
+extractRepeats:
+    nodes: 1
+    mem: "60GB"
+    time: "48:00:00"
+    partition: "open"
+    jobName: "Mindi:ReduceExtraction"
