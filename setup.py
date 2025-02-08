@@ -15,5 +15,8 @@ setup(
     author='Nikol Chantzi',
     author_email='nicolechantzi@gmail.com',
     url='https://github.com/yourusername/my_package',  
-    install_requires=requirements
+    install_requires=requirements,
+    package_data={
+        'mindi': ['defaults.json']
+        }
 )
