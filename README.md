@@ -1,4 +1,4 @@
-# InvertiaDB Analysis & Extraction
+# invertiaDB Analysis & Extraction
 
 ## Introduction
 
